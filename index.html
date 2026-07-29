@@ -1,0 +1,2764 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>200 Doces Zero Açúcar — Sabor sem Culpa</title>
+    <meta name="description"
+        content="Volte a sentir o prazer de comer sobremesas deliciosas sem culpa. Receitas Zero Açúcar para manter sua glicemia controlada.">
+
+    <!-- Open Graph / Redes Sociais -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="200 Doces Zero Açúcar — Sabor sem Culpa">
+    <meta property="og:description" content="Volte a sentir o prazer de comer sobremesas deliciosas sem culpa. Receitas Zero Açúcar para manter sua glicemia controlada.">
+    <meta property="og:image" content="images/hero.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="200 Doces Zero Açúcar — Sabor sem Culpa">
+    <meta name="twitter:description" content="Volte a sentir o prazer de comer sobremesas deliciosas sem culpa. Receitas Zero Açúcar para manter sua glicemia controlada.">
+    <meta name="twitter:image" content="images/hero.webp">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Optimized Third-Party Connections -->
+    <link rel="preconnect" href="https://connect.facebook.net" crossorigin>
+    <link rel="dns-prefetch" href="https://connect.facebook.net">
+    <link rel="preconnect" href="https://cdn.utmify.com.br" crossorigin>
+    <link rel="dns-prefetch" href="https://cdn.utmify.com.br">
+    <link rel="dns-prefetch" href="https://img.youtube.com">
+
+    <!-- Preload LCP Image -->
+    <link rel="preload" as="image" href="images/hero.webp" fetchpriority="high">
+
+    <!-- Fonts (Non-blocking to fix Render Blocking) -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Grotesk:wght@700&display=swap"
+        rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Grotesk:wght@700&display=swap"
+            rel="stylesheet">
+    </noscript>
+
+    <!-- AOS Animation Library (Non-blocking) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    </noscript>
+    <!-- Meta Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1644080239859029');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=1644080239859029&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
+    <style>
+        :root {
+            --bg-dark: #0a0a0a;
+            --bg-card: rgba(255, 255, 255, 0.05);
+            --primary: #FFD700;
+            /* Gold */
+            --secondary: #FF4500;
+            /* Neon Orange */
+            --accent: #00E5FF;
+            /* Cyan for futuristic touches */
+            --text-main: #ffffff;
+            --text-muted: #a0a0a0;
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --glow: 0 0 20px rgba(255, 215, 0, 0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+        }
+
+        /* Background Animation */
+        .bg-orb {
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(100px);
+            z-index: -1;
+            animation: float 10s infinite ease-in-out;
+            will-change: transform;
+        }
+
+
+        .orb-1 {
+            width: 400px;
+            height: 400px;
+            background: rgba(255, 69, 0, 0.15);
+            top: -100px;
+            left: -100px;
+        }
+
+        .orb-2 {
+            width: 500px;
+            height: 500px;
+            background: rgba(255, 215, 0, 0.1);
+            bottom: -100px;
+            right: -100px;
+            animation-delay: -5s;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translate(0, 0);
+            }
+
+            50% {
+                transform: translate(30px, 50px);
+            }
+        }
+
+        /* Top Announcement Bar */
+        .top-bar {
+            width: 100%;
+            background: linear-gradient(90deg, #d32f2f, #ff5722);
+            color: #ffffff;
+            font-size: 13px;
+            font-weight: 600;
+            padding: 8px 16px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+            margin-bottom: 10px;
+        }
+
+        .top-bar-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .timer-badge {
+            background: rgba(0,0,0,0.35);
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--primary);
+            border: 1px solid rgba(255, 215, 0, 0.4);
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        /* Hero Social Rating & Trust Pills */
+        .hero-rating {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            background: rgba(255, 215, 0, 0.08);
+            border: 1px solid rgba(255, 215, 0, 0.25);
+            padding: 8px 18px;
+            border-radius: 50px;
+            width: fit-content;
+        }
+
+        .stars {
+            color: #FFD700;
+            font-size: 15px;
+            letter-spacing: 2px;
+        }
+
+        .rating-text {
+            font-size: 14px;
+            font-weight: 600;
+            color: #f0f0f0;
+        }
+
+        .trust-pills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 24px;
+        }
+
+        .trust-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid var(--glass-border);
+            padding: 8px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            color: var(--text-main);
+            font-weight: 500;
+        }
+
+        .trust-pill span {
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        /* Interactive Recipe Showcase & Tabs */
+        .recipe-showcase-container {
+            margin-top: 30px;
+        }
+
+        .recipe-tabs {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 36px;
+        }
+
+        .tab-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--glass-border);
+            color: var(--text-muted);
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .tab-btn:hover, .tab-btn.active {
+            background: var(--primary);
+            color: #000;
+            border-color: var(--primary);
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .recipe-card {
+            background: var(--bg-card);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 28px 24px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .recipe-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--primary);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .recipe-card .recipe-badge {
+            background: rgba(0, 229, 255, 0.15);
+            color: var(--accent);
+            border: 1px solid rgba(0, 229, 255, 0.3);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            display: inline-block;
+            margin-top: 12px;
+        }
+
+        /* FAQ Accordion Styling */
+        .faq-accordion {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--bg-card);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            margin-bottom: 16px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            border-color: rgba(255, 215, 0, 0.3);
+        }
+
+        .faq-question {
+            padding: 20px 24px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            font-size: 18px;
+            color: var(--text-main);
+            user-select: none;
+            transition: color 0.3s ease;
+        }
+
+        .faq-icon {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            color: var(--primary);
+            transition: transform 0.3s ease, background 0.3s ease;
+            flex-shrink: 0;
+            margin-left: 16px;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            padding: 0 24px;
+            color: var(--text-muted);
+            transition: max-height 0.4s ease, padding 0.4s ease;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .faq-item.active {
+            border-color: var(--primary);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+            padding: 0 24px 20px 24px;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+            background: var(--primary);
+            color: #000;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--primary);
+        }
+
+        /* Sales Toast Social Proof */
+        .sales-toast {
+            position: fixed;
+            bottom: 24px;
+            left: 24px;
+            background: rgba(18, 18, 18, 0.95);
+            border: 1px solid var(--primary);
+            border-radius: 16px;
+            padding: 14px 18px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+            z-index: 1002;
+            backdrop-filter: blur(10px);
+            transform: translateY(120px);
+            opacity: 0;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            max-width: 350px;
+        }
+
+        .sales-toast.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .toast-avatar {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+
+        .toast-info {
+            flex-grow: 1;
+        }
+
+        .toast-name {
+            font-weight: 700;
+            font-size: 14px;
+            color: #fff;
+        }
+
+        .toast-detail {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+
+        .toast-time {
+            font-size: 11px;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .toast-close {
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            font-size: 16px;
+            cursor: pointer;
+            padding: 4px;
+            margin-left: 4px;
+            line-height: 1;
+        }
+
+        /* Mobile Sticky Floating CTA */
+        .sticky-cta-mobile {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(12px);
+            border-top: 1px solid var(--primary);
+            padding: 12px 20px;
+            z-index: 999;
+            display: none;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 -5px 25px rgba(0,0,0,0.6);
+        }
+
+        .sticky-cta-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sticky-cta-title {
+            font-size: 11px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-weight: 600;
+        }
+
+        .sticky-cta-price {
+            font-size: 18px;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        .sticky-cta-btn {
+            background: var(--primary);
+            color: #000;
+            padding: 10px 22px;
+            border-radius: 50px;
+            font-weight: 800;
+            font-size: 14px;
+            text-decoration: none;
+            text-transform: uppercase;
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+            transition: transform 0.2s;
+        }
+
+        .sticky-cta-btn:active {
+            transform: scale(0.95);
+        }
+
+        /* Pricing Trust Seals */
+        .pricing-trust-badges {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-top: 24px;
+            padding-top: 20px;
+            border-top: 1px solid var(--glass-border);
+            text-align: left;
+        }
+
+        .trust-badge-item {
+            font-size: 12px;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .trust-badge-item span {
+            font-size: 16px;
+        }
+
+        /* Hero Quick Offer Block */
+        .hero-quick-offer {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 215, 0, 0.35);
+            border-radius: 20px;
+            padding: 20px;
+            margin-top: 24px;
+            box-shadow: 0 0 35px rgba(255, 215, 0, 0.15);
+            backdrop-filter: blur(10px);
+        }
+
+        .quick-price-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 14px;
+            flex-wrap: wrap;
+        }
+
+        .quick-price-old {
+            font-size: 16px;
+            color: var(--text-muted);
+            text-decoration: line-through;
+        }
+
+        .quick-price-new {
+            font-size: 28px;
+            font-weight: 900;
+            color: var(--primary);
+            text-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+        }
+
+        .hero-cta-btn {
+            width: 100% !important;
+            display: block !important;
+            text-align: center;
+            font-size: 18px !important;
+            padding: 16px 24px !important;
+            margin-bottom: 10px;
+        }
+
+        .hero-quick-trust {
+            font-size: 12px;
+            color: var(--text-muted);
+            text-align: center;
+        }
+
+        /* Upsell Modal Popup */
+        .upsell-modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .upsell-modal-overlay.show {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .upsell-modal-card {
+            background: linear-gradient(145deg, rgba(22, 22, 22, 0.98), rgba(12, 12, 12, 0.99));
+            border: 2px solid var(--primary);
+            border-radius: 24px;
+            max-width: 520px;
+            width: 100%;
+            padding: 32px 24px;
+            position: relative;
+            box-shadow: 0 0 60px rgba(255, 215, 0, 0.35);
+            text-align: center;
+            transform: scale(0.85);
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .upsell-modal-overlay.show .upsell-modal-card {
+            transform: scale(1);
+        }
+
+        .upsell-close-btn {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: #fff;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            font-size: 18px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s;
+        }
+
+        .upsell-close-btn:hover {
+            background: rgba(255, 255, 255, 0.25);
+        }
+
+        .upsell-header-badge {
+            display: inline-block;
+            background: linear-gradient(90deg, #d32f2f, #ff5722);
+            color: #fff;
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+            box-shadow: 0 0 15px rgba(255, 69, 0, 0.5);
+        }
+
+        .upsell-title {
+            font-size: 22px;
+            color: #fff;
+            margin-bottom: 10px;
+            line-height: 1.25;
+            font-family: 'Space Grotesk', sans-serif;
+            text-transform: uppercase;
+        }
+
+        .upsell-subtitle {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .upsell-features-list {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 16px 20px;
+            margin-bottom: 20px;
+            text-align: left;
+            font-size: 13.5px;
+            color: var(--text-main);
+        }
+
+        .upsell-features-list li {
+            list-style: none;
+            margin-bottom: 8px;
+        }
+
+        .upsell-features-list li:last-child {
+            margin-bottom: 0;
+        }
+
+        .upsell-price-box {
+            font-size: 15px;
+            color: var(--text-muted);
+            margin-bottom: 18px;
+        }
+
+        .upsell-price-highlight {
+            font-size: 32px;
+            font-weight: 900;
+            color: var(--primary);
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+            display: block;
+            margin-top: 2px;
+        }
+
+        .upsell-btn-primary {
+            display: block;
+            width: 100%;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: #000;
+            font-weight: 900;
+            font-size: 16px;
+            padding: 16px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            text-transform: uppercase;
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.6);
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin-bottom: 14px;
+        }
+
+        .upsell-btn-primary:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 40px rgba(255, 215, 0, 0.8);
+        }
+
+        .upsell-link-secondary {
+            display: inline-block;
+            color: var(--text-muted);
+            font-size: 13px;
+            text-decoration: underline;
+            transition: color 0.2s;
+        }
+
+        .upsell-link-secondary:hover {
+            color: #fff;
+        }
+
+        .section-tag {
+            display: inline-block;
+            background: rgba(255, 215, 0, 0.1);
+            color: var(--primary);
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+
+        .section-header-center {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--glass-border);
+            padding: 0 0 12px 0;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 24px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-decoration: none;
+        }
+
+        .btn-glow {
+            background: transparent;
+            color: var(--primary);
+            border: 1px solid var(--primary);
+            padding: 10px 24px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-glow:hover {
+            background: var(--primary);
+            color: var(--bg-dark);
+            box-shadow: 0 0 30px var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 170px;
+            position: relative;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: clamp(40px, 5vw, 72px);
+            line-height: 1.1;
+            margin-bottom: 24px;
+        }
+
+        .hero-text .highlight {
+            color: var(--primary);
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            color: var(--text-muted);
+            margin-bottom: 40px;
+            max-width: 500px;
+        }
+
+        .hero-img-wrapper {
+            position: relative;
+        }
+
+        .hero-img {
+            width: 100%;
+            border-radius: 24px;
+            transform: perspective(1000px) rotateY(-10deg);
+            box-shadow: -20px 20px 60px rgba(0, 0, 0, 0.5);
+            border: 1px solid var(--glass-border);
+            transition: transform 0.5s;
+        }
+
+        .hero-img:hover {
+            transform: perspective(1000px) rotateY(0deg);
+        }
+
+        .floating-badge {
+            position: absolute;
+            top: 20px;
+            right: -20px;
+            background: var(--secondary);
+            color: #000;
+            padding: 16px 32px;
+            border-radius: 12px;
+            font-weight: 800;
+            transform: rotate(5deg);
+            box-shadow: 0 10px 30px rgba(255, 69, 0, 0.4);
+            animation: bounce 3s infinite ease-in-out;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0) rotate(5deg);
+            }
+
+            50% {
+                transform: translateY(-10px) rotate(5deg);
+            }
+        }
+
+        /* Cards */
+        .glass-card {
+            background: var(--bg-card);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 32px;
+            transition: all 0.3s;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Problem Section */
+        .section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 48px;
+            margin-bottom: 60px;
+            background: linear-gradient(to bottom, #fff, #888);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+        }
+
+        .problem-item {
+            text-align: center;
+        }
+
+        .problem-icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+            display: inline-block;
+            filter: drop-shadow(0 0 10px rgba(255, 69, 0, 0.5));
+        }
+
+        /* Secret Section */
+        .secret {
+            background: linear-gradient(180deg, transparent, rgba(255, 215, 0, 0.05), transparent);
+        }
+
+        .secret-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .secret-img {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 24px;
+            margin-top: 40px;
+            box-shadow: 0 0 50px rgba(255, 215, 0, 0.1);
+        }
+
+        /* Carousel Animation */
+        .carousel-container {
+            overflow: hidden;
+            width: 100%;
+            margin-top: 40px;
+            position: relative;
+            mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+            -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        }
+
+        .carousel-track {
+            display: flex;
+            gap: 24px;
+            width: max-content;
+            animation: scroll 20s linear infinite;
+        }
+
+        .carousel-track:hover {
+            animation-play-state: paused;
+        }
+
+        .carousel-item {
+            width: 300px;
+            height: 300px;
+            flex-shrink: 0;
+            border-radius: 24px;
+            overflow: hidden;
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.1);
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .carousel-item:hover img {
+            transform: scale(1.1);
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(calc(-300px * 12 - 24px * 12));
+                /* Width of 12 items + gaps */
+            }
+        }
+
+        /* Modules */
+        .modules-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+        }
+
+        .module-card {
+            position: relative;
+            overflow: hidden;
+            height: 300px;
+            border-radius: 24px;
+            cursor: pointer;
+        }
+
+        .module-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .module-card:hover .module-bg {
+            transform: scale(1.1);
+        }
+
+        .module-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 32px;
+            background: linear-gradient(to top, black, transparent);
+        }
+
+        /* Testimonials */
+        .testimonial-carousel-container {
+            overflow: hidden;
+            width: 100%;
+            margin-top: 40px;
+            position: relative;
+            mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+            -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+            padding: 20px 0;
+        }
+
+        .testimonial-track {
+            display: flex;
+            gap: 24px;
+            width: max-content;
+            animation: scroll-testimonials 30s linear infinite;
+        }
+
+        .testimonial-track:hover {
+            animation-play-state: paused;
+        }
+
+        .testimonial-card {
+            width: 350px;
+            flex-shrink: 0;
+            background: var(--bg-card);
+            border: 1px solid var(--glass-border);
+            padding: 32px;
+            border-radius: 24px;
+            transition: transform 0.3s;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        @keyframes scroll-testimonials {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(calc(-350px * 6 - 24px * 6));
+                /* Width of 6 items + gaps */
+            }
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+
+        .user-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--primary);
+        }
+
+        /* Image Testimonials Carousel */
+        .img-depo-carousel {
+            overflow: hidden;
+            width: 100%;
+            margin-top: 60px;
+            position: relative;
+            mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+            -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+            padding: 20px 0;
+        }
+
+        .img-depo-track {
+            display: flex;
+            gap: 20px;
+            width: max-content;
+            animation: scroll-img-depo 40s linear infinite;
+        }
+
+        .img-depo-track:hover {
+            animation-play-state: paused;
+        }
+
+        .img-depo-item {
+            width: 320px;
+            flex-shrink: 0;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s;
+        }
+
+        .img-depo-item:hover {
+            transform: scale(1.03);
+            border-color: var(--primary);
+        }
+
+        .img-depo-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        @keyframes scroll-img-depo {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(calc(-320px * 6 - 20px * 6));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .img-depo-item {
+                width: 260px;
+            }
+
+            @keyframes scroll-img-depo {
+                0% {
+                    transform: translateX(0);
+                }
+
+                100% {
+                    transform: translateX(calc(-260px * 6 - 20px * 6));
+                }
+            }
+        }
+
+        /* Pricing */
+        .pricing-box {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.02));
+            border: 1px solid var(--primary);
+            border-radius: 32px;
+            padding: 60px;
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pricing-box::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(transparent, var(--primary), transparent 30%);
+            animation: rotate 4s linear infinite;
+            opacity: 0.1;
+            pointer-events: none;
+        }
+
+        @keyframes rotate {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .price-tag {
+            font-size: 80px;
+            font-weight: 800;
+            color: var(--primary);
+            text-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+            margin: 24px 0;
+        }
+
+        .cta-button-large {
+            display: block;
+            width: 100%;
+            padding: 24px;
+            background: var(--primary);
+            color: #000;
+            font-weight: 800;
+            font-size: 24px;
+            text-decoration: none;
+            border-radius: 16px;
+            margin-top: 32px;
+            transition: transform 0.2s;
+            text-transform: uppercase;
+        }
+
+        .cta-button-large:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 50px var(--primary);
+        }
+
+        /* Bonus Section Styling */
+        .bonus-img {
+            width: 85%;
+            aspect-ratio: 3/4;
+            object-fit: contain;
+            border-radius: 12px;
+            margin: 0 auto 20px auto;
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .glass-card:hover .bonus-img {
+            transform: scale(1.05);
+        }
+
+        /* FAQ */
+        .faq-item {
+            border-bottom: 1px solid var(--glass-border);
+            margin-bottom: 16px;
+        }
+
+        .faq-question {
+            padding: 24px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            font-weight: 600;
+            font-size: 18px;
+        }
+
+        .faq-answer {
+            padding: 0 24px 24px;
+            color: var(--text-muted);
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--primary);
+        }
+
+        /* Pricing Grid Layout */
+        .pricing-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+            max-width: 1100px;
+            margin: 0 auto;
+            align-items: center;
+        }
+
+        .pricing-box.premium {
+            border: 2px solid var(--primary);
+            position: relative;
+            z-index: 2;
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.05), rgba(0, 0, 0, 0.8));
+        }
+
+        .pricing-box.basic {
+            border: 1px solid var(--glass-border);
+            background: var(--bg-card);
+            padding: 40px;
+            max-width: 100%;
+        }
+
+        .pricing-box.basic .price-tag {
+            font-size: 48px;
+            color: var(--text-main);
+            text-shadow: none;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 20px;
+            }
+
+            /* Section spacing */
+            .section {
+                padding: 60px 0;
+            }
+
+            .section-title {
+                font-size: 32px;
+                margin-bottom: 40px;
+            }
+
+            /* Hero Section */
+            .hero {
+                padding-top: 220px;
+                min-height: auto;
+            }
+
+            .hero-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 32px;
+            }
+
+            .hero-text h1 {
+                font-size: 36px;
+                line-height: 1.2;
+            }
+
+            .hero-text p {
+                margin: 0 auto 32px;
+                font-size: 16px;
+            }
+
+            .hero-img {
+                transform: none;
+                box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            }
+
+            .floating-badge {
+                position: static;
+                transform: none;
+                margin: 20px auto 0;
+                display: inline-block;
+                font-size: 12px;
+                padding: 12px 24px;
+            }
+
+            /* Pricing Mobile Fixes */
+            .pricing-container {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .pricing-box,
+            .pricing-box.basic,
+            .pricing-box.premium {
+                padding: 32px 24px;
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .pricing-box.premium {
+                transform: none;
+            }
+
+            /* Fix "Mais Vendido" badge overlap on mobile */
+            .pricing-box.premium .floating-badge {
+                position: relative !important;
+                top: auto !important;
+                right: auto !important;
+                left: auto !important;
+                transform: none !important;
+                display: block !important;
+                margin: 0 auto 16px !important;
+                width: fit-content !important;
+            }
+
+            .price-tag {
+                font-size: 56px;
+            }
+
+            .cta-button-large {
+                font-size: 18px;
+                padding: 18px;
+                min-height: 56px;
+            }
+
+            /* Mobile Header Fixes */
+            header {
+                padding: 12px 0;
+            }
+
+            header .container {
+                padding: 0 20px;
+            }
+
+            .logo {
+                font-size: 16px;
+            }
+
+            .btn-glow {
+                padding: 10px 20px;
+                font-size: 13px;
+                white-space: nowrap;
+                min-height: 44px;
+                display: inline-flex;
+                align-items: center;
+            }
+
+            /* Grid Fixes for small screens */
+            .modules-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .problem-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .glass-card {
+                padding: 24px;
+            }
+
+            /* Carousel adjustments */
+            .carousel-item {
+                width: 250px;
+                height: 250px;
+            }
+
+            .testimonial-card {
+                width: 300px;
+                padding: 24px;
+            }
+
+            /* Video container */
+            .video-container {
+                max-width: 100%;
+            }
+
+            /* Module cards */
+            .module-card {
+                height: 250px;
+            }
+
+            .module-overlay {
+                padding: 24px;
+            }
+
+            /* Background orbs - reduce on mobile */
+            .orb-1,
+            .orb-2 {
+                opacity: 0.5;
+            }
+
+            /* Fix carousel animation for mobile - items are 250px instead of 300px */
+            @keyframes scroll {
+                0% {
+                    transform: translateX(0);
+                }
+
+                100% {
+                    transform: translateX(calc(-250px * 12 - 24px * 12));
+                }
+            }
+        }
+
+        /* Small Mobile Devices */
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 16px;
+            }
+
+            .section {
+                padding: 50px 0;
+            }
+
+            .section-title {
+                font-size: 28px;
+                margin-bottom: 32px;
+            }
+
+            /* Hero adjustments */
+            .hero {
+                padding-top: 220px;
+            }
+
+            .top-bar {
+                padding: 6px 10px;
+                font-size: 11.5px;
+                line-height: 1.3;
+            }
+
+            .timer-badge {
+                font-size: 11px;
+                padding: 2px 8px;
+            }
+
+            .hero-text h1 {
+                font-size: 28px;
+            }
+
+            .hero-text p {
+                font-size: 15px;
+            }
+
+            .floating-badge {
+                font-size: 11px;
+                padding: 10px 20px;
+            }
+
+            /* Header */
+            header .container {
+                padding: 0 16px;
+            }
+
+            .logo {
+                font-size: 14px;
+            }
+
+            .btn-glow {
+                padding: 8px 16px;
+                font-size: 12px;
+            }
+
+            /* Pricing */
+            .pricing-box,
+            .pricing-box.basic,
+            .pricing-box.premium {
+                padding: 24px 20px;
+            }
+
+            .price-tag {
+                font-size: 48px;
+            }
+
+            .cta-button-large {
+                font-size: 16px;
+                padding: 16px;
+            }
+
+            /* Cards */
+            .glass-card {
+                padding: 20px;
+            }
+
+            .problem-icon {
+                font-size: 40px;
+            }
+
+            /* Carousel */
+            .carousel-item {
+                width: 200px;
+                height: 200px;
+            }
+
+            .testimonial-card {
+                width: 260px;
+                padding: 20px;
+            }
+
+            /* Module cards */
+            .module-card {
+                height: 200px;
+            }
+
+            .module-overlay {
+                padding: 20px;
+            }
+
+            /* Reduce font sizes */
+            h3 {
+                font-size: 18px;
+            }
+
+            p {
+                font-size: 15px;
+            }
+
+            /* Fix carousel animation for small mobile - items are 200px */
+            @keyframes scroll {
+                0% {
+                    transform: translateX(0);
+                }
+
+                100% {
+                    transform: translateX(calc(-200px * 12 - 24px * 12));
+                }
+            }
+        }
+
+        /* Tablet Landscape */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .container {
+                padding: 0 32px;
+            }
+
+            .hero-grid {
+                gap: 40px;
+            }
+
+            .pricing-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 32px;
+            }
+
+            .modules-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Video Section */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            /* 16:9 */
+            height: 0;
+            overflow: hidden;
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: 24px;
+            box-shadow: 0 0 50px rgba(255, 215, 0, 0.1);
+            border: 1px solid var(--glass-border);
+        }
+
+        .video-container iframe,
+        .video-facade {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 24px;
+        }
+
+        .video-facade {
+            background-size: cover;
+            background-position: center;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+        }
+
+        .video-facade::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            transition: background 0.3s;
+            border-radius: 24px;
+        }
+
+        .video-facade:hover::before {
+            background: rgba(0, 0, 0, 0.1);
+        }
+
+        .play-button {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 50%;
+            position: relative;
+            z-index: 2;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.6);
+            border: 2px solid #ffffff;
+        }
+
+        .play-button::after {
+            content: '';
+            border-style: solid;
+            border-width: 12px 0 12px 20px;
+            border-color: transparent transparent transparent #000;
+            margin-left: 4px;
+        }
+
+        .video-facade:hover .play-button {
+            transform: scale(1.1);
+            box-shadow: 0 0 50px rgba(255, 215, 0, 0.9);
+        }
+
+        /* Custom Clean Player Overlay */
+        .video-wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 24px;
+            overflow: hidden;
+        }
+
+        .video-wrapper iframe,
+        #yt-player-target {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 24px;
+            pointer-events: none;
+        }
+
+        .video-control-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0);
+            transition: background 0.3s ease;
+        }
+
+        .video-control-overlay.paused {
+            background: rgba(0, 0, 0, 0.45);
+        }
+
+        .play-pause-badge {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            box-shadow: 0 0 40px rgba(255, 215, 0, 0.7);
+            border: 2px solid #ffffff;
+            opacity: 0;
+            transform: scale(0.7);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            pointer-events: none;
+            user-select: none;
+        }
+
+        .video-control-overlay.paused .play-pause-badge {
+            opacity: 1;
+            transform: scale(1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+
+    <header>
+        <div class="top-bar">
+            <div class="top-bar-content">
+                <span>⚡ <strong>OFERTA DE LANÇAMENTO:</strong> Ebook 200 Doces Zero Açúcar com <strong>75% de Desconto</strong></span>
+                <span class="timer-badge">⌛ Expira em: <strong id="top-timer">14:59</strong></span>
+            </div>
+        </div>
+        <div class="container nav-content">
+            <a href="#" class="logo">200 DOCES ZERO AÇÚCAR</a>
+            <a href="#oferta" class="btn-glow">APROVEITAR OFERTA</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- SECTION 1: HERO (FAST OFFER AT THE TOP) -->
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-text">
+                    <div class="hero-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-text">4.9/5 (+12.400 Alunas Satisfeitas)</span>
+                    </div>
+                    <h1>Descubra Como Fazer <span class="highlight">Sobremesas Deliciosas</span> Sem Usar Açúcar Tradicional</h1>
+                    <p>Mais de 200 receitas práticas, rápidas e com ingredientes simples para você saborear pudins, bolos e brigadeiros incríveis todos os dias com total liberdade.</p>
+
+                    <div class="trust-pills-grid">
+                        <div class="trust-pill"><span>✓</span> 100% Sem Açúcar Tradicional</div>
+                        <div class="trust-pill"><span>✓</span> Receitas Práticas & Rápidas</div>
+                        <div class="trust-pill"><span>✓</span> Ingredientes Acessíveis</div>
+                        <div class="trust-pill"><span>✓</span> Acesso Imediato no Celular</div>
+                    </div>
+
+                    <!-- Fast Offer Price & CTA Block -->
+                    <div class="hero-quick-offer">
+                        <div class="quick-price-wrap">
+                            <span class="quick-price-old">De R$ 67,00</span>
+                            <span class="quick-price-new">Por apenas R$ 10,00</span>
+                        </div>
+                        <a href="javascript:void(0)" onclick="openUpsellModal()" class="cta-button-large hero-cta-btn">
+                            ⚡ QUERO COMPRAR POR R$ 10,00
+                        </a>
+                        <div class="hero-quick-trust">
+                            🔒 Compra 100% Segura • 7 Dias de Garantia • Envio Imediato
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-img-wrapper">
+                    <img src="images/hero.webp" alt="Doces Zero Açúcar" class="hero-img" fetchpriority="high"
+                        width="1024" height="1024">
+                    <div class="floating-badge" style="text-align: center; font-size: 14px;">
+                        OFERTA LIMITADA<br>DE <span style="text-decoration: line-through;">R$67</span> POR<br><span
+                            style="font-size: 24px;">R$10</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: PROBLEMA -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header-center" data-aos="fade-up">
+                    <span class="section-tag">DIFICULDADES DO DIA A DIA</span>
+                    <h2 class="section-title" style="margin-bottom:12px;">COMER DOCE PARECE UM DESAFIO NA SUA ROTINA?</h2>
+                    <p style="font-size: 18px; color: var(--text-muted);">Veja os maiores obstáculos de quem deseja reduzir o consumo de açúcar:</p>
+                </div>
+                <div class="problem-grid">
+                    <div class="glass-card problem-item" data-aos="fade-up" data-aos-delay="100">
+                        <span class="problem-icon">🍬</span>
+                        <h3>Vontade Constante de Doce</h3>
+                        <p class="text-muted">Aquela vontade de saborear uma boa sobremesa após o almoço ou no fim da tarde continua surgindo na sua rotina.</p>
+                    </div>
+                    <div class="glass-card problem-item" data-aos="fade-up" data-aos-delay="200">
+                        <span class="problem-icon">🔍</span>
+                        <h3>Receitas Complicadas</h3>
+                        <p class="text-muted">Encontrar receitas na internet que parecem bonitas, mas pedem ingredientes caros e difíceis de achar no mercado.</p>
+                    </div>
+                    <div class="glass-card problem-item" data-aos="fade-up" data-aos-delay="300">
+                        <span class="problem-icon">❌</span>
+                        <h3>Falta de Variedade</h3>
+                        <p class="text-muted">Ficar preso sempre às mesmas poucas opções sem graça, sentindo que está abrindo mão do verdadeiro sabor.</p>
+                    </div>
+                    <div class="glass-card problem-item" data-aos="fade-up" data-aos-delay="400">
+                        <span class="problem-icon">📉</span>
+                        <h3>Sobremesas Sem Cremosidade</h3>
+                        <p class="text-muted">Tentar fazer doces em casa sem açúcar tradicional e ver que eles ficam secos, duros ou com sabor artificial.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: SOLUÇÃO -->
+        <section class="section secret">
+            <div class="container secret-content">
+                <div class="section-header-center" data-aos="zoom-in">
+                    <span class="section-tag">A SOLUÇÃO PRÁTICA</span>
+                    <h2 class="section-title" style="margin-bottom:0;">Volte a Saborear Doces Incríveis com o Ebook 200 Doces Zero Açúcar</h2>
+                </div>
+                <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                    <p style="font-size: 20px; color: var(--text-muted); margin-bottom: 24px;">Imagine poder preparar em poucos minutos um pudim super cremoso, um bolo fofinho ou um brigadeiro impecável — tudo feito sem usar açúcar tradicional e com ingredientes simples do mercado.</p>
+                    <p style="font-size: 18px; color: var(--text-main); margin-bottom: 24px;">Criamos este guia completo com mais de 200 receitas testadas e aprovadas para devolver a variedade e o prazer à sua mesa de forma leve, prática e saborosa. <strong>É o fim da falta de opções na sua rotina!</strong></p>
+                </div>
+
+                <div class="carousel-container">
+                    <div class="carousel-track">
+                        <!-- Original Set -->
+                        <div class="carousel-item">
+                            <img src="images/img1.webp" alt="Sobremesa Zero Açúcar 1" loading="lazy" width="600"
+                                height="600">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/img2.webp" alt="Sobremesa Zero Açúcar 2" loading="lazy" width="600"
+                                height="600">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/img3.webp" alt="Sobremesa Zero Açúcar 3" loading="lazy" width="600"
+                                height="600">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/img4.webp" alt="Sobremesa Zero Açúcar 4" loading="lazy" width="600"
+                                height="600">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/img5.webp" alt="Sobremesa Zero Açúcar 5" loading="lazy" width="600"
+                                height="600">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/img6.webp" alt="Sobremesa Zero Açúcar 6" loading="lazy" width="600"
+                                height="600">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/img7.webp" alt="Sobremesa Zero Açúcar 7" loading="lazy" width="600"
+                                height="600">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/img8.webp" alt="Sobremesa Zero Açúcar 8" loading="lazy" width="600"
+                                height="600">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/img9.webp" alt="Sobremesa Zero Açúcar 9" loading="lazy" width="600"
+                                height="600">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/img10.webp" alt="Sobremesa Zero Açúcar 10" loading="lazy" width="600"
+                                height="600">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/img11.webp" alt="Sobremesa Zero Açúcar 11" loading="lazy" width="600"
+                                height="600">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/img12.webp" alt="Sobremesa Zero Açúcar 12" loading="lazy" width="600"
+                                height="600">
+                        </div>
+
+                        <!-- Duplicate Set for Infinite Loop -->
+                        <div class="carousel-item">
+                            <img src="images/img1.webp" alt="Sobremesa Zero Açúcar 1" loading="lazy" width="600"
+                                height="600">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/img2.webp" alt="Sobremesa Zero Açúcar 2" loading="lazy" width="600"
+                                height="600">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/img3.webp" alt="Sobremesa Zero Açúcar 3" loading="lazy" width="600"
+                                height="600">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/img4.webp" alt="Sobremesa Zero Açúcar 4" loading="lazy" width="600"
+                                height="600">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/img5.webp" alt="Sobremesa Zero Açúcar 5" loading="lazy" width="600"
+                                height="600">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/img6.webp" alt="Sobremesa Zero Açúcar 6" loading="lazy" width="600"
+                                height="600">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/img7.webp" alt="Sobremesa Zero Açúcar 7" loading="lazy" width="600"
+                                height="600">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/img8.webp" alt="Sobremesa Zero Açúcar 8" loading="lazy" width="600"
+                                height="600">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/img9.webp" alt="Sobremesa Zero Açúcar 9" loading="lazy" width="600"
+                                height="600">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/img10.webp" alt="Sobremesa Zero Açúcar 10" loading="lazy" width="600"
+                                height="600">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/img11.webp" alt="Sobremesa Zero Açúcar 11" loading="lazy" width="600"
+                                height="600">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/img12.webp" alt="Sobremesa Zero Açúcar 12" loading="lazy" width="600"
+                                height="600">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: DEMONSTRAÇÃO REAL -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header-center" data-aos="fade-up">
+                    <span class="section-tag">DEMONSTRAÇÃO REAL</span>
+                    <h2 class="section-title" style="margin-bottom:0;">VEJA NA PRÁTICA COMO É FÁCIL PREPARAR</h2>
+                </div>
+                <div class="video-container" data-aos="zoom-in" id="video-container">
+                    <div class="video-facade" id="video-facade"
+                        style="background-image: url('https://img.youtube.com/vi/5NhEJk1eFCM/hqdefault.jpg');"
+                        onclick="initCustomPlayer()"
+                        onkeypress="if(event.key==='Enter'||event.key===' ')initCustomPlayer()"
+                        role="button" tabindex="0" aria-label="Reproduzir vídeo">
+                        <div class="play-button" role="presentation"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: O QUE ESTÁ INCLUSO -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header-center" data-aos="fade-up">
+                    <span class="section-tag">O QUE VOCÊ VAI RECEBER</span>
+                    <h2 class="section-title" style="margin-bottom:12px;">200 RECEITAS DIVIDIDAS EM CATEGORIAS PRÁTICAS</h2>
+                    <p style="color: var(--text-muted); font-size: 18px;">
+                        Opções variadas para todos os momentos do seu dia:
+                    </p>
+                </div>
+
+                <div class="recipe-tabs" data-aos="fade-up">
+                    <button class="tab-btn active" onclick="filterRecipes('all', this)">✨ Todos os Doces</button>
+                    <button class="tab-btn" onclick="filterRecipes('pudins', this)">🍮 Pudins Cremosos</button>
+                    <button class="tab-btn" onclick="filterRecipes('bolos', this)">🍰 Bolos Fofinhos</button>
+                    <button class="tab-btn" onclick="filterRecipes('brigadeiros', this)">🍬 Brigadeiros</button>
+                    <button class="tab-btn" onclick="filterRecipes('mousses', this)">🍨 Mousses Aeradas</button>
+                    <button class="tab-btn" onclick="filterRecipes('biscoitos', this)">🍪 Biscoitos Crocantes</button>
+                </div>
+
+                <div class="problem-grid recipe-grid" id="recipe-grid">
+                    <div class="glass-card recipe-card problem-item" data-category="pudins" data-aos="fade-up">
+                        <span class="problem-icon">🍮</span>
+                        <h3>Pudins Cremosos</h3>
+                        <p class="text-muted">Pudim de leite tradicional sem açúcar, pudim de chocolate aveludado e sobremesas geladas.</p>
+                        <span class="recipe-badge">Sem Açúcar • Muito Cremoso</span>
+                    </div>
+                    <div class="glass-card recipe-card problem-item" data-category="bolos" data-aos="fade-up" data-aos-delay="100">
+                        <span class="problem-icon">🍰</span>
+                        <h3>Bolos Fofinhos</h3>
+                        <p class="text-muted">Bolo de cenoura com calda, bolo de milho macio, bolo de chocolate e vulcão para a tarde.</p>
+                        <span class="recipe-badge">Massa Fofinha • Rápido de Fazer</span>
+                    </div>
+                    <div class="glass-card recipe-card problem-item" data-category="brigadeiros" data-aos="fade-up" data-aos-delay="200">
+                        <span class="problem-icon">🍬</span>
+                        <h3>Brigadeiros Gourmet</h3>
+                        <p class="text-muted">Brigadeiro tradicional de colher, beijinho de coco e docinhos de festa que ficam no ponto perfeito.</p>
+                        <span class="recipe-badge">Textura Perfeita • Sem Leite Condensado</span>
+                    </div>
+                    <div class="glass-card recipe-card problem-item" data-category="mousses" data-aos="fade-up" data-aos-delay="300">
+                        <span class="problem-icon">🍨</span>
+                        <h3>Mousses Leves</h3>
+                        <p class="text-muted">Mousse de maracujá aerada, mousse de limão refrescante e sobremesas rápidas no copinho.</p>
+                        <span class="recipe-badge">Refrescante • Leve & Aerado</span>
+                    </div>
+                    <div class="glass-card recipe-card problem-item" data-category="biscoitos" data-aos="fade-up" data-aos-delay="400">
+                        <span class="problem-icon">🍪</span>
+                        <h3>Biscoitos & Cookies</h3>
+                        <p class="text-muted">Cookies crocantes com gotas de cacau, biscoitinhos de amêndoas e rosquinhas práticas.</p>
+                        <span class="recipe-badge">Crocante • Prático para Lanche</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 6: BENEFÍCIOS -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header-center" data-aos="fade-up">
+                    <span class="section-tag">POR QUE VALE A PENA?</span>
+                    <h2 class="section-title" style="margin-bottom:0;">Praticidade e Sabor de Verdade no Seu Dia a Dia</h2>
+                </div>
+                <div class="problem-grid">
+                    <div class="glass-card problem-item" data-aos="fade-up">
+                        <span class="problem-icon">✨</span>
+                        <h3>MAIS OPÇÕES NO CARDÁPIO</h3>
+                        <p class="text-muted">Centenas de variedades para você transformar o momento da sobremesa e nunca enjoar.</p>
+                    </div>
+                    <div class="glass-card problem-item" data-aos="fade-up" data-aos-delay="100">
+                        <span class="problem-icon">⚡</span>
+                        <h3>RECEITAS SIMPLES E RÁPIDAS</h3>
+                        <p class="text-muted">Passo a passo descomplicado, ideal mesmo para quem não tem experiência na cozinha.</p>
+                    </div>
+                    <div class="glass-card problem-item" data-aos="fade-up" data-aos-delay="200">
+                        <span class="problem-icon">🛒</span>
+                        <h3>INGREDIENTES ACESSÍVEIS</h3>
+                        <p class="text-muted">Ingredientes fáceis de encontrar em qualquer supermercado comum da sua região.</p>
+                    </div>
+                    <div class="glass-card problem-item" data-aos="fade-up" data-aos-delay="300">
+                        <span class="problem-icon">👨‍👩‍👧</span>
+                        <h3>VARIEDADE PARA TODA A FAMÍLIA</h3>
+                        <p class="text-muted">Doces saborosos que agradam o paladar de crianças e adultos de forma leve.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 7: PROVA SOCIAL & AUTORIDADE -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header-center" data-aos="fade-up">
+                    <span class="section-tag">DEPOIMENTOS REAIS</span>
+                    <h2 class="section-title" style="margin-bottom:12px;">A Opinião de Quem Já Aprovou as Receitas</h2>
+                    <p style="color: var(--text-muted); font-size: 18px;">VEJA O QUE NOSSAS ALUNAS ESTÃO ACHANDO DAS SOBREMESAS:</p>
+                </div>
+                <!-- Image Testimonials Carousel -->
+                <div class="img-depo-carousel">
+                    <div class="img-depo-track">
+                        <!-- Original Set -->
+                        <div class="img-depo-item">
+                            <img src="depoimentos/depo1.webp" alt="Depoimento 1" loading="lazy" width="540"
+                                height="741">
+                        </div>
+                        <div class="img-depo-item">
+                            <img src="depoimentos/depo2.webp" alt="Depoimento 2" loading="lazy" width="540"
+                                height="894">
+                        </div>
+                        <div class="img-depo-item">
+                            <img src="depoimentos/depo3.webp" alt="Depoimento 3" loading="lazy" width="540"
+                                height="846">
+                        </div>
+                        <div class="img-depo-item">
+                            <img src="depoimentos/depo4.webp" alt="Depoimento 4" loading="lazy" width="600"
+                                height="900">
+                        </div>
+                        <div class="img-depo-item">
+                            <img src="depoimentos/depo5.webp" alt="Depoimento 5" loading="lazy" width="600"
+                                height="750">
+                        </div>
+                        <div class="img-depo-item">
+                            <img src="depoimentos/depo6.webp" alt="Depoimento 6" loading="lazy" width="600"
+                                height="750">
+                        </div>
+                        <!-- Duplicate Set for Infinite Loop -->
+                        <div class="img-depo-item">
+                            <img src="depoimentos/depo1.webp" alt="Depoimento 1" loading="lazy" width="540"
+                                height="741">
+                        </div>
+                        <div class="img-depo-item">
+                            <img src="depoimentos/depo2.webp" alt="Depoimento 2" loading="lazy" width="540"
+                                height="894">
+                        </div>
+                        <div class="img-depo-item">
+                            <img src="depoimentos/depo3.webp" alt="Depoimento 3" loading="lazy" width="540"
+                                height="846">
+                        </div>
+                        <div class="img-depo-item">
+                            <img src="depoimentos/depo4.webp" alt="Depoimento 4" loading="lazy" width="600"
+                                height="900">
+                        </div>
+                        <div class="img-depo-item">
+                            <img src="depoimentos/depo5.webp" alt="Depoimento 5" loading="lazy" width="600"
+                                height="750">
+                        </div>
+                        <div class="img-depo-item">
+                            <img src="depoimentos/depo6.webp" alt="Depoimento 6" loading="lazy" width="600"
+                                height="750">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container hero-grid">
+                <div class="hero-img-wrapper" data-aos="fade-right">
+                    <img src="images/isadora.webp" alt="Isadora Marinho" class="hero-img" width="800" height="625"
+                        style="transform: none; border-radius: 50%; max-width: 400px; width: 100%; height: auto; object-fit: cover; margin: 0 auto; box-shadow: 0 0 40px rgba(255, 215, 0, 0.2);">
+                </div>
+                <div class="hero-text" data-aos="fade-left">
+                    <span class="section-tag">QUEM CRIOU AS RECEITAS</span>
+                    <h2 class="section-title" style="text-align: left; margin-bottom: 24px;">Olá! Eu sou a Isadora Marinho</h2>
+                    <p class="text-muted" style="margin-bottom: 16px;">Sou Isadora Marinho, chef especialista em culinária saudável e afeto na cozinha. Minha missão é transformar ingredientes simples em sobremesas maravilhosas, saborosas e fáceis de fazer no seu dia a dia.</p>
+                    <p class="text-muted">Acredito que comer bem não precisa ser sem graça nem complicado. Desenvolvi cada uma destas 200 receitas para provar que você pode ter variedade, leveza e muito sabor à mesa sem usar açúcar tradicional.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 8: BÔNUS -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header-center" data-aos="fade-up">
+                    <span class="section-tag">PRESENTES ESPECIAIS</span>
+                    <h2 class="section-title" style="margin-bottom:12px;">VEJA SEUS BÔNUS EXCLUSIVOS!</h2>
+                    <p style="color: var(--text-muted); margin-bottom: 8px;">Adquirindo hoje o livro digital "200 Doces Zero Açúcar"</p>
+                    <p style="color: var(--secondary); font-weight: 800; font-size: 18px;">Você terá acesso imediato a 5 Bônus Incríveis</p>
+                </div>
+
+                <div class="problem-grid">
+                    <div class="glass-card" data-aos="fade-up">
+                        <img src="bonus/bonus1.webp" alt="Ebook Bolos Diet" class="bonus-img" width="600" height="407">
+                        <h3 style="color: var(--primary);">BÔNUS 1</h3>
+                        <h4>Bolos Diet</h4>
+                        <p class="text-muted">20 receitas de bolos irresistíveis e zero açúcar.</p>
+                        <p style="color: var(--accent); font-weight: 800;">GRÁTIS</p>
+                    </div>
+                    <div class="glass-card" data-aos="fade-up" data-aos-delay="100">
+                        <img src="bonus/bonus2.webp" alt="Ebook Páscoa Zero Açúcar" class="bonus-img" width="600"
+                            height="407">
+                        <h3 style="color: var(--primary);">BÔNUS 2</h3>
+                        <h4>Páscoa Zero Açúcar</h4>
+                        <p class="text-muted">20 receitas de ovos de páscoa e delícias.</p>
+                        <p style="color: var(--accent); font-weight: 800;">GRÁTIS</p>
+                    </div>
+                    <div class="glass-card" data-aos="fade-up" data-aos-delay="200">
+                        <img src="bonus/bonus3.webp" alt="Ebook Pizzas Low Carb" class="bonus-img" width="600"
+                            height="600">
+                        <h3 style="color: var(--primary);">BÔNUS 3</h3>
+                        <h4>Pizzas Low Carb</h4>
+                        <p class="text-muted">Deliciosas, saudáveis e feitas na Airfryer.</p>
+                        <p style="color: var(--accent); font-weight: 800;">GRÁTIS</p>
+                    </div>
+                    <div class="glass-card" data-aos="fade-up" data-aos-delay="300">
+                        <img src="bonus/bonus5.webp" alt="Ebook Chocotones Irresistíveis" class="bonus-img" width="600"
+                            height="600">
+                        <h3 style="color: var(--primary);">BÔNUS 4</h3>
+                        <h4>Chocotones Irresistíveis</h4>
+                        <p class="text-muted">Sem açúcar, glúten ou lactose.</p>
+                        <p style="color: var(--accent); font-weight: 800;">GRÁTIS</p>
+                    </div>
+                    <div class="glass-card" data-aos="fade-up" data-aos-delay="400">
+                        <img src="bonus/bonus6.webp" alt="Ebook Refeições de Microondas" class="bonus-img" width="600"
+                            height="600">
+                        <h3 style="color: var(--primary);">BÔNUS 5</h3>
+                        <h4>Refeições de Microondas</h4>
+                        <p class="text-muted">Práticas e Low Carb para o dia a dia.</p>
+                        <p style="color: var(--accent); font-weight: 800;">GRÁTIS</p>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 48px;" data-aos="fade-up">
+                    <a href="#oferta" class="cta-button-large" style="width: auto; display: inline-block; font-size: 18px; padding: 18px 36px;">QUERO GARANTIR MEUS 5 BÔNUS!</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 9: DEPOIMENTOS REAIS -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header-center" data-aos="fade-up">
+                    <span class="section-tag">DEPOIMENTOS REAIS</span>
+                    <h2 class="section-title" style="margin-bottom:12px;">A Opinião de Quem Já Experimentou</h2>
+                    <p style="color: var(--text-muted); font-size: 20px;">VEJA A OPINIÃO SINCERA DE QUEM VOLTOU A COMER DOCE SEM MEDO:</p>
+                </div>
+                <!-- Image Testimonials Carousel -->
+                <div class="img-depo-carousel">
+                    <div class="img-depo-track">
+                        <!-- Original Set -->
+                        <div class="img-depo-item">
+                            <img src="depoimentos/depo1.webp" alt="Depoimento 1" loading="lazy" width="540"
+                                height="741">
+                        </div>
+                        <div class="img-depo-item">
+                            <img src="depoimentos/depo2.webp" alt="Depoimento 2" loading="lazy" width="540"
+                                height="894">
+                        </div>
+                        <div class="img-depo-item">
+                            <img src="depoimentos/depo3.webp" alt="Depoimento 3" loading="lazy" width="540"
+                                height="846">
+                        </div>
+                        <div class="img-depo-item">
+                            <img src="depoimentos/depo4.webp" alt="Depoimento 4" loading="lazy" width="600"
+                                height="900">
+                        </div>
+                        <div class="img-depo-item">
+                            <img src="depoimentos/depo5.webp" alt="Depoimento 5" loading="lazy" width="600"
+                                height="750">
+                        </div>
+                        <div class="img-depo-item">
+                            <img src="depoimentos/depo6.webp" alt="Depoimento 6" loading="lazy" width="600"
+                                height="750">
+                        </div>
+                        <!-- Duplicate Set for Infinite Loop -->
+                        <div class="img-depo-item">
+                            <img src="depoimentos/depo1.webp" alt="Depoimento 1" loading="lazy" width="540"
+                                height="741">
+                        </div>
+                        <div class="img-depo-item">
+                            <img src="depoimentos/depo2.webp" alt="Depoimento 2" loading="lazy" width="540"
+                                height="894">
+                        </div>
+                        <div class="img-depo-item">
+                            <img src="depoimentos/depo3.webp" alt="Depoimento 3" loading="lazy" width="540"
+                                height="846">
+                        </div>
+                        <div class="img-depo-item">
+                            <img src="depoimentos/depo4.webp" alt="Depoimento 4" loading="lazy" width="600"
+                                height="900">
+                        </div>
+                        <div class="img-depo-item">
+                            <img src="depoimentos/depo5.webp" alt="Depoimento 5" loading="lazy" width="600"
+                                height="750">
+                        </div>
+                        <div class="img-depo-item">
+                            <img src="depoimentos/depo6.webp" alt="Depoimento 6" loading="lazy" width="600"
+                                height="750">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 10: PRICING -->
+        <section class="section" id="oferta">
+            <div class="container">
+                <div class="section-header-center" data-aos="fade-up">
+                    <span class="section-tag">OFERTA POR TEMPO LIMITADO</span>
+                    <h2 class="section-title" style="margin-bottom:0;">Escolha Seu Plano</h2>
+                </div>
+
+                <div class="pricing-container">
+                    <!-- Basic Plan -->
+                    <div class="pricing-box basic glass-card" data-aos="zoom-in" data-aos-delay="100">
+                        <h3>PLANO BÁSICO</h3>
+                        <p style="color: var(--text-muted); margin-bottom: 20px;">De R$67 por apenas:</p>
+                        <div class="price-tag">R$ 10,00</div>
+                        <ul style="text-align: left; list-style: none; margin-bottom: 32px; color: var(--text-muted);">
+                            <li style="margin-bottom: 12px;">✅ 200 Receitas de Doces Zero Açúcar</li>
+                            <li style="margin-bottom: 12px;">✅ Entrega via WhatsApp e Email</li>
+                            <li style="margin-bottom: 12px;">✅ 5 Bônus Exclusivos</li>
+                            <li style="margin-bottom: 12px;">✅ Acesso Vitalício</li>
+                        </ul>
+                        <a href="javascript:void(0)" onclick="openUpsellModal()"
+                            class="btn-glow" style="display: block; text-align: center; margin-top: 24px;">QUERO
+                            COMPRAR!</a>
+                        <div class="pricing-trust-badges">
+                            <div class="trust-badge-item"><span>⚡</span> Envio Imediato</div>
+                            <div class="trust-badge-item"><span>🛡️</span> 7 Dias Garantia</div>
+                            <div class="trust-badge-item"><span>🔒</span> Hotmart Seguro</div>
+                            <div class="trust-badge-item"><span>💳</span> PIX e Cartão</div>
+                        </div>
+                    </div>
+
+                    <!-- Complete Plan -->
+                    <div class="pricing-box premium glass-card" data-aos="zoom-in">
+                        <div class="floating-badge"
+                            style="position: absolute; top: 15px; right: 15px; transform: rotate(5deg); box-shadow: 0 5px 15px rgba(255,69,0,0.3); animation: bounce 3s infinite ease-in-out; font-size: 12px; padding: 8px 16px;">
+                            MAIS VENDIDO
+                        </div>
+                        <h3>PLANO COMPLETO</h3>
+                        <p style="color: var(--text-muted); margin-bottom: 20px;">De R$97 por apenas:</p>
+                        <div class="price-tag">R$ 27,00</div>
+                        <p style="color: var(--primary); font-weight: bold; margin-bottom: 16px;">VOCÊ LEVA JUNTO:</p>
+                        <ul style="text-align: left; list-style: none; margin-bottom: 32px; color: var(--text-muted);">
+                            <li style="margin-bottom: 12px;">✅ Todos os itens do plano básico</li>
+                            <li style="margin-bottom: 12px;">✅ + 720 Receitas Zero Glúten e Açúcar</li>
+                            <li style="margin-bottom: 12px;">✅ Panetones sem Glúten/Lactose</li>
+                            <li style="margin-bottom: 12px;">✅ Ebook Panetones Artesanal Lucrativo</li>
+                            <li style="margin-bottom: 12px;">✅ Livro de Pães, Bolos e Biscoitos sem Glúten</li>
+                            <li style="margin-bottom: 12px;">✅ 5 Bônus Exclusivos</li>
+                            <li style="margin-bottom: 12px;">✅ Acesso Vitalício</li>
+                        </ul>
+                        <a href="https://pay.hotmart.com/U100027702E?off=m25hozt7&checkoutMode=10"
+                            class="cta-button-large">QUERO
+                            COMPRAR!</a>
+                        <div class="pricing-trust-badges">
+                            <div class="trust-badge-item"><span>⚡</span> Envio Imediato</div>
+                            <div class="trust-badge-item"><span>🛡️</span> 7 Dias Garantia</div>
+                            <div class="trust-badge-item"><span>🔒</span> Hotmart Seguro</div>
+                            <div class="trust-badge-item"><span>💳</span> PIX e Cartão</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    style="margin-top: 60px; border-top: 1px solid var(--glass-border); padding-top: 30px; text-align: center; max-width: 800px; margin-left: auto; margin-right: auto;">
+                    <h3 style="color: var(--primary); margin-bottom: 16px;">GARANTIA INCONTESTÁVEL DE 7 DIAS</h3>
+                    <p style="font-size: 16px; color: var(--text-muted); margin-bottom: 16px;">Caso não goste do que
+                        encontrar, pode ficar tranquilo e sereno. Eu devolvo seu dinheiro de volta - e sem perguntas -
+                        em até 7 dias após a compra, ok?</p>
+                    <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 24px;">(Mas eu tenho certeza que
+                        você vai adorar!)</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 11: FAQ -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header-center" data-aos="fade-up">
+                    <span class="section-tag">DÚVIDAS FREQUENTES</span>
+                    <h2 class="section-title" style="margin-bottom:0;">Perguntas Frequentes</h2>
+                </div>
+
+                <div class="faq-accordion" data-aos="fade-up">
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>Preciso ter experiência na cozinha para fazer as receitas?</span>
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            Não! Todas as receitas possuem um passo a passo descomplicado e prático, criado tanto para iniciantes quanto para quem já ama cozinhar.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>Como recebo o acesso ao livro digital?</span>
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            O envio é imediato! Assim que seu pagamento é confirmado, você recebe o link de acesso e o arquivo em PDF diretamente no seu e-mail e via WhatsApp.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>As receitas utilizam ingredientes caros ou difíceis de encontrar?</span>
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            Não! Focamos 100% em ingredientes acessíveis e fáceis de encontrar em qualquer supermercado comum da sua região.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>O livro digital funciona no celular e tablet?</span>
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            Sim! Você pode abrir e ler o arquivo confortavelmente no celular, tablet ou computador. Se quiser, também pode mandar imprimir o material.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>O meu acesso é vitalício?</span>
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            Sim! O pagamento é único e o acesso ao ebook é seu para sempre. Você pode baixar e salvar o arquivo para acessar quando quiser.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>Como funciona a Garantia de 7 Dias?</span>
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            Você conta com a nossa Garantia Incondicional de 7 Dias. Se por qualquer motivo não ficar totalmente satisfeito com as receitas, basta nos enviar um e-mail que devolvemos 100% do seu dinheiro sem burocracia.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer style="padding: 40px 0; text-align: center; border-top: 1px solid var(--glass-border);">
+        <div class="container">
+            <p>&copy; 2025 200 Doces Zero Açúcar. Todos os direitos reservados.</p>
+            <p style="font-size: 12px; color: var(--text-muted); margin-top: 8px;">Este site não é afiliado ao Facebook
+                ou a qualquer entidade do Facebook. Depois que você sair do Facebook, a responsabilidade não é deles e
+                sim do nosso site.</p>
+            <div style="margin-top: 20px;">
+                <a href="#" style="color: var(--text-muted); text-decoration: none; margin: 0 10px;">Política de
+                    Privacidade</a> |
+                <a href="#" style="color: var(--text-muted); text-decoration: none; margin: 0 10px;">Termos de Uso</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sales Toast Notification -->
+    <div class="sales-toast" id="sales-toast">
+        <div class="toast-avatar" id="toast-icon">🧁</div>
+        <div class="toast-info">
+            <div class="toast-name" id="toast-name">Maria Silva</div>
+            <div class="toast-detail" id="toast-detail">adquiriu o Plano Completo!</div>
+            <div class="toast-time" id="toast-time">há 3 minutos • São Paulo, SP</div>
+        </div>
+        <button class="toast-close" onclick="closeToast()" aria-label="Fechar notificação">✕</button>
+    </div>
+
+    <!-- Mobile Sticky CTA Bar -->
+    <div class="sticky-cta-mobile" id="sticky-cta-mobile">
+        <div class="sticky-cta-text">
+            <span class="sticky-cta-title">200 Doces Zero Açúcar</span>
+            <span class="sticky-cta-price">R$ 10,00</span>
+        </div>
+        <a href="#oferta" class="sticky-cta-btn">COMPRAR AGORA</a>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script>
+        // AOS Animation Init
+        window.addEventListener('load', function () {
+            requestAnimationFrame(function () {
+                requestAnimationFrame(function () {
+                    if (typeof AOS !== 'undefined') {
+                        AOS.init({
+                            duration: 800,
+                            once: true
+                        });
+                    }
+                });
+            });
+        });
+
+        // 1. Countdown Timer (15 min)
+        (function initCountdown() {
+            var timerDisplay = document.getElementById('top-timer');
+            if (!timerDisplay) return;
+
+            var storageKey = 'doces_zero_timer_end';
+            var endTime = sessionStorage.getItem(storageKey);
+            
+            if (!endTime || isNaN(endTime)) {
+                endTime = Date.now() + (14 * 60 + 59) * 1000;
+                sessionStorage.setItem(storageKey, endTime);
+            }
+
+            function updateTimer() {
+                var now = Date.now();
+                var remainingMs = endTime - now;
+
+                if (remainingMs <= 0) {
+                    endTime = Date.now() + 15 * 60 * 1000;
+                    sessionStorage.setItem(storageKey, endTime);
+                    remainingMs = 15 * 60 * 1000;
+                }
+
+                var totalSeconds = Math.floor(remainingMs / 1000);
+                var minutes = Math.floor(totalSeconds / 60);
+                var seconds = totalSeconds % 60;
+
+                timerDisplay.textContent = 
+                    (minutes < 10 ? '0' : '') + minutes + ':' + 
+                    (seconds < 10 ? '0' : '') + seconds;
+            }
+
+            updateTimer();
+            setInterval(updateTimer, 1000);
+        })();
+
+        // 2. FAQ Accordion Toggle
+        function toggleFaq(element) {
+            var faqItem = element.parentElement;
+            var isActive = faqItem.classList.contains('active');
+            
+            document.querySelectorAll('.faq-item').forEach(function(item) {
+                item.classList.remove('active');
+            });
+
+            if (!isActive) {
+                faqItem.classList.add('active');
+            }
+        }
+
+        // 3. Recipe Category Filter
+        function filterRecipes(category, btnElement) {
+            var buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(function(b) { b.classList.remove('active'); });
+            if (btnElement) btnElement.classList.add('active');
+
+            var cards = document.querySelectorAll('#recipe-grid .recipe-card');
+            cards.forEach(function(card) {
+                var cardCat = card.getAttribute('data-category');
+                if (category === 'all' || cardCat === category) {
+                    card.style.display = 'block';
+                    card.style.opacity = '1';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // 4. Sales Toast Social Proof
+        var toastDismissed = false;
+        var buyers = [
+            { name: 'Maria S.', detail: 'adquiriu o Plano Completo!', time: 'há 2 minutos • São Paulo, SP', icon: '🍰' },
+            { name: 'Ana Paula G.', detail: 'adquiriu 200 Doces Zero Açúcar!', time: 'há 4 minutos • Belo Horizonte, MG', icon: '🍮' },
+            { name: 'Juliana M.', detail: 'adquiriu o Plano Completo!', time: 'há 6 minutos • Curitiba, PR', icon: '🍬' },
+            { name: 'Cláudia R.', detail: 'adquiriu 200 Doces Zero Açúcar!', time: 'há 8 minutos • Rio de Janeiro, RJ', icon: '🍨' },
+            { name: 'Luciana T.', detail: 'adquiriu o Plano Completo!', time: 'há 11 minutos • Porto Alegre, RS', icon: '🍪' },
+            { name: 'Fernanda K.', detail: 'adquiriu 200 Doces Zero Açúcar!', time: 'há 15 minutos • Brasília, DF', icon: '🧁' }
+        ];
+        var toastIndex = 0;
+
+        function showNextToast() {
+            if (toastDismissed) return;
+            var toastEl = document.getElementById('sales-toast');
+            if (!toastEl) return;
+
+            var buyer = buyers[toastIndex];
+            document.getElementById('toast-icon').textContent = buyer.icon;
+            document.getElementById('toast-name').textContent = buyer.name;
+            document.getElementById('toast-detail').textContent = buyer.detail;
+            document.getElementById('toast-time').textContent = buyer.time;
+
+            toastEl.classList.add('show');
+
+            setTimeout(function() {
+                if (!toastDismissed) {
+                    toastEl.classList.remove('show');
+                }
+            }, 5000);
+
+            toastIndex = (toastIndex + 1) % buyers.length;
+        }
+
+        function closeToast() {
+            toastDismissed = true;
+            var toastEl = document.getElementById('sales-toast');
+            if (toastEl) toastEl.classList.remove('show');
+        }
+
+        setTimeout(function() {
+            showNextToast();
+            setInterval(showNextToast, 12000);
+        }, 4000);
+
+        // 5. Mobile Sticky Floating CTA Scroll Detector
+        window.addEventListener('scroll', function() {
+            var stickyBar = document.getElementById('sticky-cta-mobile');
+            if (!stickyBar) return;
+            if (window.scrollY > 450) {
+                stickyBar.classList.add('visible');
+            } else {
+                stickyBar.classList.remove('visible');
+            }
+        });
+
+        // 6. Custom YouTube Player Controller with Click-to-Pause
+        var ytPlayer = null;
+
+        (function loadYtApi() {
+            var tag = document.createElement('script');
+            tag.src = "https://www.youtube.com/iframe_api";
+            var firstScriptTag = document.getElementsByTagName('script')[0];
+            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+        })();
+
+        function initCustomPlayer() {
+            var container = document.getElementById('video-container');
+            if (!container) return;
+
+            container.innerHTML = 
+                '<div class="video-wrapper">' +
+                    '<div id="yt-player-target"></div>' +
+                    '<div class="video-control-overlay" id="video-overlay" onclick="togglePlayPause()">' +
+                        '<div class="play-pause-badge" id="play-pause-badge">▶</div>' +
+                    '</div>' +
+                '</div>';
+
+            if (window.YT && window.YT.Player) {
+                createYtPlayer();
+            } else {
+                window.onYouTubeIframeAPIReady = function() {
+                    createYtPlayer();
+                };
+            }
+        }
+
+        function createYtPlayer() {
+            ytPlayer = new YT.Player('yt-player-target', {
+                height: '100%',
+                width: '100%',
+                videoId: '5NhEJk1eFCM',
+                playerVars: {
+                    autoplay: 1,
+                    controls: 0,
+                    modestbranding: 1,
+                    rel: 0,
+                    iv_load_policy: 3,
+                    disablekb: 1,
+                    fs: 0,
+                    playsinline: 1
+                },
+                events: {
+                    'onStateChange': onPlayerStateChange
+                }
+            });
+        }
+
+        function togglePlayPause() {
+            if (!ytPlayer || typeof ytPlayer.getPlayerState !== 'function') return;
+            var state = ytPlayer.getPlayerState();
+            var overlay = document.getElementById('video-overlay');
+            var badge = document.getElementById('play-pause-badge');
+
+            if (state === YT.PlayerState.PLAYING) {
+                ytPlayer.pauseVideo();
+                if (overlay) overlay.classList.add('paused');
+                if (badge) badge.textContent = '▶';
+            } else {
+                ytPlayer.playVideo();
+                if (overlay) overlay.classList.remove('paused');
+            }
+        }
+
+        function onPlayerStateChange(event) {
+            var overlay = document.getElementById('video-overlay');
+            var badge = document.getElementById('play-pause-badge');
+            if (!overlay || !badge) return;
+
+            if (event.data === YT.PlayerState.PAUSED) {
+                overlay.classList.add('paused');
+                badge.textContent = '▶';
+            } else if (event.data === YT.PlayerState.PLAYING) {
+                overlay.classList.remove('paused');
+            } else if (event.data === YT.PlayerState.ENDED) {
+                overlay.classList.add('paused');
+                badge.textContent = '↺';
+            }
+        }
+
+        // 7. Upsell Modal Handlers
+        function openUpsellModal() {
+            var modal = document.getElementById('upsell-modal');
+            if (modal) {
+                modal.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeUpsellModal() {
+            var modal = document.getElementById('upsell-modal');
+            if (modal) {
+                modal.classList.remove('show');
+                document.body.style.overflow = '';
+            }
+        }
+    </script>
+
+    <!-- Upsell Modal Popup -->
+    <div class="upsell-modal-overlay" id="upsell-modal" onclick="if(event.target===this)closeUpsellModal()">
+        <div class="upsell-modal-card">
+            <button class="upsell-close-btn" onclick="closeUpsellModal()" aria-label="Fechar modal">✕</button>
+            <span class="upsell-header-badge">⚡ OFERTA EXCLUSIVA DE ÚLTIMA CHANCE</span>
+            <h2 class="upsell-title">ESPERE! LEVE O PLANO COMPLETO POR APENAS <span style="color: var(--primary);">R$ 17,00</span>!</h2>
+            <p class="upsell-subtitle">Por apenas <strong>R$ 7,00 a mais</strong>, leve o pacote definitivo com +720 receitas extras e panetones sem glúten!</p>
+            
+            <ul class="upsell-features-list">
+                <li>✅ <strong>200 Doces Zero Açúcar</strong> (Plano Básico)</li>
+                <li>✅ <strong>+ 720 Receitas Extras</strong> Zero Glúten & Açúcar</li>
+                <li>✅ Panetones Especiais sem Glúten e Lactose</li>
+                <li>✅ Ebook Panetone Artesanal Lucrativo</li>
+                <li>✅ Livro de Pães, Bolos e Biscoitos sem Glúten</li>
+                <li>✅ Todos os 5 Bônus Exclusivos</li>
+                <li>✅ Acesso Vitalício + Envio Imediato</li>
+            </ul>
+
+            <div class="upsell-price-box">
+                De <span style="text-decoration: line-through;">R$ 97,00</span> por apenas:
+                <span class="upsell-price-highlight">R$ 17,00</span>
+            </div>
+
+            <a href="https://pay.hotmart.com/U100027702E?off=m25hozt7&checkoutMode=10" class="upsell-btn-primary">🔥 SIM! QUERO O PLANO COMPLETO POR R$ 17</a>
+            
+            <div style="margin-top: 10px;">
+                <a href="https://pay.hotmart.com/U100027702E?off=mvfpmcz9&checkoutMode=10" class="upsell-link-secondary">Não obrigado, quero apenas o Plano Básico por R$ 10,00 »</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -149,7 +149,7 @@
 
     /** INSERT ou UPDATE (upsert) por chave primária */
     async function sbUpsert(table, record) {
-        return fetch(`${SUPABASE_URL}/rest/v1/${table}`, {
+        const res = await fetch(`${SUPABASE_URL}/rest/v1/${table}`, {
             method: 'POST',
             headers: {
                 ...BASE_HEADERS,
@@ -157,25 +157,40 @@
             },
             body: JSON.stringify(record),
         });
+        if (!res.ok) {
+            const txt = await res.text();
+            console.error(`[Analytics] sbUpsert(${table}) ${res.status}:`, txt);
+        }
+        return res;
     }
 
     /** PATCH (atualização parcial) com filtro */
     async function sbPatch(table, filter, updates, keepalive = false) {
-        return fetch(`${SUPABASE_URL}/rest/v1/${table}?${filter}`, {
+        const res = await fetch(`${SUPABASE_URL}/rest/v1/${table}?${filter}`, {
             method: 'PATCH',
             headers: { ...BASE_HEADERS, 'Prefer': 'return=minimal' },
             body: JSON.stringify(updates),
             keepalive,
         });
+        if (!res.ok) {
+            const txt = await res.text();
+            console.error(`[Analytics] sbPatch(${table}) ${res.status}:`, txt);
+        }
+        return res;
     }
 
     /** INSERT simples */
     async function sbInsert(table, record) {
-        return fetch(`${SUPABASE_URL}/rest/v1/${table}`, {
+        const res = await fetch(`${SUPABASE_URL}/rest/v1/${table}`, {
             method: 'POST',
             headers: { ...BASE_HEADERS, 'Prefer': 'return=minimal' },
             body: JSON.stringify(record),
         });
+        if (!res.ok) {
+            const txt = await res.text();
+            console.error(`[Analytics] sbInsert(${table}) ${res.status}:`, txt);
+        }
+        return res;
     }
 
     // ============================================================

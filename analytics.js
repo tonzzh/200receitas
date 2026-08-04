@@ -292,7 +292,10 @@
         // Salva a visita imediatamente no Supabase
         try {
             await sbUpsert('visits', record);
-        } catch (_) { /* falha silenciosa */ }
+            console.log('[Analytics] visita enviada, id:', record.id);
+        } catch (e) {
+            console.error('[Analytics] EXCEÇÃO ao salvar visita:', e);
+        }
 
         // Busca geolocalização em segundo plano e atualiza o registro
         getGeoInfo().then(async (geo) => {

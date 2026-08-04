@@ -142,15 +142,6 @@
         return sid;
     }
 
-    // ============================================================
-    // UTM / SOURCE TRACKER
-    // ============================================================
-    function getUtmSource() {
-        const params = new URLSearchParams(location.search);
-        const utm = params.get('utm_source') || params.get('utm_campaign') || null;
-        if (utm) sessionStorage.setItem('rz_utm', utm);
-        return sessionStorage.getItem('rz_utm');
-    }
 
     // ============================================================
     // SUPABASE REST API HELPERS
@@ -252,7 +243,6 @@
         const botDetected = isBot(ua);
         const { device, browser, os } = getDeviceInfo();
         const sessionId = getSessionId();
-        const utmSource = getUtmSource();
 
         // Página atual normalizada (suporte a múltiplas páginas do site)
         const pageName = location.pathname
@@ -270,7 +260,6 @@
             os,
             referrer: document.referrer || 'direct',
             page: pageName,
-            utm_source: utmSource,
             screen_w: screen.width,
             screen_h: screen.height,
             lang: navigator.language,

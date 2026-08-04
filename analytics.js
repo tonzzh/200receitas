@@ -1,0 +1,421 @@
+/**
+ * ReceitasZero Analytics Tracker — Supabase Edition v2
+ * Rastreia visitantes humanos e bots, cliques, tempo na página e mais.
+ * Dados enviados diretamente ao banco Supabase via REST API.
+ *
+ * Melhorias v2:
+ *  - Rastreamento de página atual (suporte a múltiplas páginas do site)
+ *  - Timeout de geolocalização ajustado
+ *  - Detecção de in-app browsers (Facebook, Instagram, WhatsApp)
+ *  - Source UTM preservado na sessão
+ */
+(function () {
+    'use strict';
+
+    // ============================================================
+    // CONFIGURAÇÕES SUPABASE
+    // ============================================================
+    const SUPABASE_URL = 'https://gnrebmaxrnncqtfnabng.supabase.co';
+    const ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImducmVibWF4cm5uY3F0Zm5hYm5nIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODE4MDc0MTUsImV4cCI6MjA5NzM4MzQxNX0.JgT8e70f4X5qeSITRsxoqPEJemPSnfqA_rpGAfWGlcQ';
+
+    const BASE_HEADERS = {
+        'Content-Type': 'application/json',
+        'apikey': ANON_KEY,
+        'Authorization': 'Bearer ' + ANON_KEY,
+    };
+
+    // ============================================================
+    // DETECÇÃO DE BOTS
+    // ============================================================
+    const BOT_PATTERNS = [
+        /googlebot/i, /bingbot/i, /slurp/i, /duckduckbot/i, /baiduspider/i,
+        /yandexbot/i, /sogou/i, /exabot/i, /ia_archiver/i,
+        /crawler/i, /spider/i, /scraper/i, /bot\b/i, /robot/i, /crawl/i,
+        /wget/i, /curl/i, /python-requests/i, /headless/i,
+        /phantomjs/i, /selenium/i, /puppeteer/i, /playwright/i,
+        /lighthouse/i, /pagespeed/i, /gtmetrix/i, /pingdom/i, /uptime/i,
+        /checker/i, /validator/i, /scanner/i, /ahrefsbot/i,
+        /semrushbot/i, /mj12bot/i, /dotbot/i, /rogerbot/i, /archive\.org/i,
+        // Bots reais do Meta (UAs específicos de crawlers, NÃO do app)
+        /facebot/i, /facebookexternalhit/i, /facebookcatalog/i,
+        /meta-externalagent/i, /meta-externalfetcher/i, /meta-externalads/i,
+        /adsbot-facebook/i, /facebookbot/i,
+        /igexternalfetcher/i, /linkedinbot/i
+        // ATENÇÃO: /facebook/i, /instagram/i e /whatsapp/i removidos
+        // pois o browser interno do app (FBAN, FBIOS) seria detectado como bot
+    ];
+
+    function isBot(ua) {
+        if (!ua) return true;
+        return BOT_PATTERNS.some(p => p.test(ua));
+    }
+
+    function getBotName(ua) {
+        if (!ua) return 'Unknown Bot';
+        const patterns = [
+            [/googlebot/i, 'Googlebot'],
+            [/bingbot/i, 'Bingbot'],
+            [/yandexbot/i, 'YandexBot'],
+            [/baiduspider/i, 'Baiduspider'],
+            [/duckduckbot/i, 'DuckDuckBot'],
+            [/ahrefsbot/i, 'AhrefsBot'],
+            [/semrushbot/i, 'SemrushBot'],
+            [/lighthouse/i, 'Google Lighthouse'],
+            [/pagespeed/i, 'PageSpeed'],
+            [/puppeteer/i, 'Puppeteer'],
+            [/selenium/i, 'Selenium'],
+            [/playwright/i, 'Playwright'],
+            [/headless/i, 'Headless Browser'],
+            [/python-requests/i, 'Python Requests'],
+            [/curl/i, 'cURL'],
+            [/wget/i, 'Wget'],
+            // Facebook Ads / Meta
+            [/adsbot-facebook/i, 'Facebook AdsBot'],
+            [/facebookcatalog/i, 'Facebook Catalog Bot'],
+            [/meta-externalagent/i, 'Meta ExternalAgent'],
+            [/meta-externalfetcher/i, 'Meta ExternalFetcher'],
+            [/facebookexternalhit/i, 'Facebook Link Preview'],
+            [/facebookbot/i, 'FacebookBot'],
+            [/facebot/i, 'Facebot'],
+            [/facebook/i, 'Facebook Bot'],
+            // Instagram / WhatsApp
+            [/igexternalfetcher/i, 'Instagram Fetcher'],
+            [/instagram/i, 'Instagram Bot'],
+            [/whatsapp/i, 'WhatsApp Bot'],
+        ];
+        for (const [pat, name] of patterns) {
+            if (pat.test(ua)) return name;
+        }
+        return 'Unknown Bot';
+    }
+
+    // ============================================================
+    // DETECÇÃO DE IN-APP BROWSER
+    // ============================================================
+    function getInAppBrowser(ua) {
+        if (/FBAN|FBAV|FBIOS/i.test(ua)) return 'Facebook App';
+        if (/Instagram/i.test(ua)) return 'Instagram App';
+        if (/WhatsApp/i.test(ua)) return 'WhatsApp App';
+        if (/TikTok/i.test(ua)) return 'TikTok App';
+        return null;
+    }
+
+    // ============================================================
+    // DETECÇÃO DE DISPOSITIVO / NAVEGADOR / OS
+    // ============================================================
+    function getDeviceInfo() {
+        const ua = navigator.userAgent;
+
+        const device = /Mobi|Android|iPhone|iPad|iPod/i.test(ua)
+            ? (/iPad/i.test(ua) ? 'Tablet' : 'Mobile')
+            : 'Desktop';
+
+        let browser = 'Unknown';
+        const inApp = getInAppBrowser(ua);
+        if (inApp) browser = inApp;
+        else if (/Edg\//i.test(ua)) browser = 'Edge';
+        else if (/OPR\/|Opera/i.test(ua)) browser = 'Opera';
+        else if (/Chrome\//i.test(ua) && !/Chromium/i.test(ua)) browser = 'Chrome';
+        else if (/Firefox\//i.test(ua)) browser = 'Firefox';
+        else if (/Safari\//i.test(ua) && !/Chrome/i.test(ua)) browser = 'Safari';
+        else if (/Trident\/|MSIE/i.test(ua)) browser = 'Internet Explorer';
+
+        let os = 'Unknown';
+        if (/Windows/i.test(ua)) os = 'Windows';
+        else if (/Mac OS X/i.test(ua)) os = 'macOS';
+        else if (/Android/i.test(ua)) os = 'Android';
+        else if (/iPhone|iPad|iPod/i.test(ua)) os = 'iOS';
+        else if (/Linux/i.test(ua)) os = 'Linux';
+
+        return { device, browser, os };
+    }
+
+    // ============================================================
+    // SESSION ID
+    // ============================================================
+    function getSessionId() {
+        let sid = sessionStorage.getItem('rz_sid');
+        if (!sid) {
+            sid = 'sess_' + Date.now() + '_' + Math.random().toString(36).slice(2, 9);
+            sessionStorage.setItem('rz_sid', sid);
+        }
+        return sid;
+    }
+
+    // ============================================================
+    // UTM / SOURCE TRACKER
+    // ============================================================
+    function getUtmSource() {
+        const params = new URLSearchParams(location.search);
+        const utm = params.get('utm_source') || params.get('utm_campaign') || null;
+        if (utm) sessionStorage.setItem('rz_utm', utm);
+        return sessionStorage.getItem('rz_utm');
+    }
+
+    // ============================================================
+    // SUPABASE REST API HELPERS
+    // ============================================================
+
+    /** INSERT ou UPDATE (upsert) por chave primária */
+    async function sbUpsert(table, record) {
+        return fetch(`${SUPABASE_URL}/rest/v1/${table}`, {
+            method: 'POST',
+            headers: {
+                ...BASE_HEADERS,
+                'Prefer': 'resolution=merge-duplicates,return=minimal',
+            },
+            body: JSON.stringify(record),
+        });
+    }
+
+    /** PATCH (atualização parcial) com filtro */
+    async function sbPatch(table, filter, updates, keepalive = false) {
+        return fetch(`${SUPABASE_URL}/rest/v1/${table}?${filter}`, {
+            method: 'PATCH',
+            headers: { ...BASE_HEADERS, 'Prefer': 'return=minimal' },
+            body: JSON.stringify(updates),
+            keepalive,
+        });
+    }
+
+    /** INSERT simples */
+    async function sbInsert(table, record) {
+        return fetch(`${SUPABASE_URL}/rest/v1/${table}`, {
+            method: 'POST',
+            headers: { ...BASE_HEADERS, 'Prefer': 'return=minimal' },
+            body: JSON.stringify(record),
+        });
+    }
+
+    // ============================================================
+    // GEOLOCALIZAÇÃO (com fallback para mobile/Facebook browser)
+    // ============================================================
+    async function getGeoInfo() {
+        const apis = [
+            // API 1: freeipapi.com (CORS enabled, highly stable)
+            async () => {
+                const r = await fetch('https://free.freeipapi.com/api/json', { signal: AbortSignal.timeout(5000) });
+                if (!r.ok) throw new Error();
+                const d = await r.json();
+                if (!d.ipAddress) throw new Error();
+                return {
+                    ip: d.ipAddress || null,
+                    country: d.countryName || null,
+                    country_code: d.countryCode || null,
+                    city: d.cityName || null,
+                    region: d.regionName || null,
+                    org: d.asnOrganization || null
+                };
+            },
+            // API 2: geojs.io (CORS enabled, highly stable fallback)
+            async () => {
+                const r = await fetch('https://get.geojs.io/v1/ip/geo.json', { signal: AbortSignal.timeout(5000) });
+                if (!r.ok) throw new Error();
+                const d = await r.json();
+                if (!d.ip) throw new Error();
+                return {
+                    ip: d.ip || null,
+                    country: d.country || null,
+                    country_code: d.country_code || null,
+                    city: d.city || null,
+                    region: d.region || null,
+                    org: d.organization_name || null
+                };
+            },
+            // API 3: ipinfo.io (CORS enabled, stable fallback)
+            async () => {
+                const r = await fetch('https://ipinfo.io/json', { signal: AbortSignal.timeout(5000) });
+                if (!r.ok) throw new Error();
+                const d = await r.json();
+                if (!d.ip) throw new Error();
+                return {
+                    ip: d.ip || null,
+                    country: null,
+                    country_code: d.country || null,
+                    city: d.city || null,
+                    region: d.region || null,
+                    org: d.org || null
+                };
+            },
+        ];
+        for (const api of apis) {
+            try { return await api(); } catch (_) { }
+        }
+        return { ip: null, country: null, country_code: null, city: null, region: null, org: null };
+    }
+
+    // ============================================================
+    // REGISTRAR VISITA
+    // ============================================================
+    async function trackVisit() {
+        const ua = navigator.userAgent;
+        const botDetected = isBot(ua);
+        const { device, browser, os } = getDeviceInfo();
+        const sessionId = getSessionId();
+        const utmSource = getUtmSource();
+
+        // Página atual normalizada (suporte a múltiplas páginas do site)
+        const pageName = location.pathname
+            .replace(/\/$/, '')
+            .split('/')
+            .pop() || 'index.html';
+
+        const record = {
+            id: sessionId,
+            type: botDetected ? 'bot' : 'human',
+            bot_name: botDetected ? getBotName(ua) : null,
+            ua,
+            device,
+            browser,
+            os,
+            referrer: document.referrer || 'direct',
+            page: pageName,
+            utm_source: utmSource,
+            screen_w: screen.width,
+            screen_h: screen.height,
+            lang: navigator.language,
+            ip: null,
+            country: null,
+            country_code: null,
+            city: null,
+            region: null,
+            org: null,
+            time_on_page: 0,
+            clicks: 0,
+            scroll_depth: 0,
+        };
+
+        // Salva a visita imediatamente no Supabase
+        try {
+            await sbUpsert('visits', record);
+        } catch (_) { /* falha silenciosa */ }
+
+        // Busca geolocalização em segundo plano e atualiza o registro
+        getGeoInfo().then(async (geo) => {
+            if (geo.ip) {
+                try {
+                    await sbPatch(
+                        'visits',
+                        `id=eq.${encodeURIComponent(sessionId)}`,
+                        {
+                            ip: geo.ip,
+                            country: geo.country,
+                            country_code: geo.country_code,
+                            city: geo.city,
+                            region: geo.region,
+                            org: geo.org
+                        }
+                    );
+                } catch (_) { /* falha silenciosa */ }
+            }
+        });
+
+        return sessionId;
+    }
+
+    // ============================================================
+    // RASTREAR ENGAJAMENTO (tempo, scroll, cliques CTA)
+    // ============================================================
+    function trackEngagement(sessionId) {
+        const startTime = Date.now();
+        let maxScroll = 0;
+        let clicks = 0;
+
+        // Variáveis de controle para evitar atualizações duplicadas com os mesmos dados
+        let lastSavedTime = -1;
+        let lastSavedScroll = -1;
+        let lastSavedClicks = -1;
+
+        async function pushUpdate(keepalive = false) {
+            const timeOnPage = Math.round((Date.now() - startTime) / 1000);
+
+            // Só envia a requisição se algum dado mudou desde o último envio
+            if (timeOnPage === lastSavedTime && maxScroll === lastSavedScroll && clicks === lastSavedClicks) {
+                return;
+            }
+
+            lastSavedTime = timeOnPage;
+            lastSavedScroll = maxScroll;
+            lastSavedClicks = clicks;
+
+            try {
+                await sbPatch(
+                    'visits',
+                    `id=eq.${encodeURIComponent(sessionId)}`,
+                    { time_on_page: timeOnPage, scroll_depth: maxScroll, clicks },
+                    keepalive
+                );
+            } catch (_) { }
+        }
+
+        // Profundidade de scroll suavizada (Throttling de 200ms)
+        let scrollTimeout = null;
+        window.addEventListener('scroll', () => {
+            if (scrollTimeout) return;
+            scrollTimeout = setTimeout(() => {
+                scrollTimeout = null;
+                const pct = Math.round(
+                    ((window.scrollY + window.innerHeight) / document.body.scrollHeight) * 100
+                );
+                if (pct > maxScroll) maxScroll = Math.min(pct, 100);
+            }, 200);
+        }, { passive: true });
+
+        // Cliques — detecta CTAs
+        document.addEventListener('click', async (e) => {
+            clicks++;
+            const target = e.target.closest('a, button');
+            if (!target) return;
+
+            const href = target.href || '';
+            const text = (target.innerText || '').trim().slice(0, 80);
+            const isCTA = /quero|comprar|garantir|pegar|acessar|pedido|oferta|sim!/i.test(text);
+
+            const isAffiliate = href.includes('hotmart') ||
+                href.includes('kiwify') ||
+                href.includes('eduzz') ||
+                href.includes('monetizze');
+
+            if (isCTA || isAffiliate) {
+                try {
+                    await sbInsert('events', {
+                        session_id: sessionId,
+                        type: 'cta_click',
+                        label: text.slice(0, 60),
+                        href: href.slice(0, 200),
+                    });
+                } catch (_) { }
+            }
+        });
+
+        // Atualizar a cada 30s
+        const interval = setInterval(() => pushUpdate(false), 30000);
+
+        // visibilitychange: funciona no iOS Safari, Facebook in-app browser e Android
+        document.addEventListener('visibilitychange', () => {
+            if (document.visibilityState === 'hidden') {
+                pushUpdate(true);
+            }
+        });
+
+        // beforeunload + pagehide como backup (desktop e alguns Androids)
+        window.addEventListener('beforeunload', () => { clearInterval(interval); pushUpdate(true); });
+        window.addEventListener('pagehide', () => { clearInterval(interval); pushUpdate(true); });
+    }
+
+    async function init() {
+        try {
+            const sessionId = await trackVisit();
+            trackEngagement(sessionId);
+        } catch (_) {
+            // Falha silenciosa — nunca impacta o site
+        }
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+    } else {
+        init();
+    }
+
+})();
